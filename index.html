@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Cloud</title>
+    <style>
+        body {
+            background-color: #444;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .cascade {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .cascade span {
+            animation: cascade 1s ease-in-out;
+            animation-fill-mode: both;
+            display: inline-block;
+        }
+        /* Multi-colour for each letter */
+        .cascade span:nth-child(1) { color: #FF5733; }
+        .cascade span:nth-child(2) { color: #FF8D1A; }
+        .cascade span:nth-child(3) { color: #FFC300; }
+        .cascade span:nth-child(4) { color: #28B463; }
+        .cascade span:nth-child(5) { color: #1F618D; }
+        .cascade span:nth-child(6) { color: #8E44AD; }
+        .cascade span:nth-child(7) { color: #E67E22; }
+        .cascade span:nth-child(8) { color: #F39C12; }
+        .cascade span:nth-child(9) { color: #16A085; }
+        .cascade span:nth-child(10) { color: #2ECC71; }
+        .cascade span:nth-child(11) { color: #3498DB; }
+        .cascade span:nth-child(12) { color: #9B59B6; }
+
+        /* Cascade animation */
+        @keyframes cascade {
+            0% { opacity: 0; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .cascade span {
+            animation-delay: calc(var(--i) * 0.1s);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="cascade">
+        <span style="--i:0">H</span>
+        <span style="--i:1">e</span>
+        <span style="--i:2">l</span>
+        <span style="--i:3">l</span>
+        <span style="--i:4">o</span>
+        <span style="--i:5">&nbsp;</span>
+        <span style="--i:6">C</span>
+        <span style="--i:7">l</span>
+        <span style="--i:8">o</span>
+        <span style="--i:9">u</span>
+        <span style="--i:10">d</span>
+    </h1>
+</body>
